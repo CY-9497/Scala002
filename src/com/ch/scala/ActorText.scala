@@ -1,5 +1,11 @@
 package com.ch.scala
 import scala.actors.Actor
+
+/**
+ * 通讯模型
+ * @param actor
+ * @param string
+ */
 case class Message(actor: Actor,string: String)
 class HelloActor1 extends Actor{
   override def act(): Unit = {
