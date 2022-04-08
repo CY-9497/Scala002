@@ -68,7 +68,8 @@ object MobileLocation {
     val result2 = value.join(locationInfo)
     val result3 = result2.groupBy(_._2._1._1)
     val result4 = result3.mapValues(x => {
-      x.toList.sortBy(_._2._1._2)
+//      将排序结果倒过来，取通讯时间保持最长的数据
+      x.toList.sortBy(_._2._1._2).reverse.take(1)
     })
     result4.foreach(println)
     sc.stop()
