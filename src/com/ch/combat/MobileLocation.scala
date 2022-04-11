@@ -12,6 +12,7 @@ object MobileLocation {
     val plc2 = lines.filter(x => x.length > 1)
     plc2.foreach(x=>{
       println(x.substring(20,26))
+      println(x.length)
     })
     println(plc2.count())
 //    数据过滤,分割出时间中的时分秒，剔除在9：00~17.30之外的数据
